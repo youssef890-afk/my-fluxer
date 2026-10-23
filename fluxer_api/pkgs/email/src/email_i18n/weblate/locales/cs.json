@@ -1,0 +1,94 @@
+{
+	"account_deletion_cancelled": {
+		"subject": "Smazání vašeho účtu {product_name} bylo zrušeno",
+		"body": "Dobrý den, {username},\n\nNaplánované smazání vašeho účtu {product_name} bylo zrušeno. Váš účet nebude smazán.\n\n{safety_email, select, null {Máte-li jakékoli dotazy, kontaktujte správce této instance.} other {Máte-li jakékoli dotazy, kontaktujte {safety_email}.}}\n\n– Tým {product_name}"
+	},
+	"account_deletion_scheduled_inactivity": {
+		"subject": "Váš účet {product_name} bude smazán kvůli neaktivitě",
+		"body": "Dobrý den, {username},\n\nVáš účet {product_name} byl dlouho neaktivní, a proto jsme jeho smazání naplánovali na {deletion_date}.\n\nPokud si chcete účet ponechat, přihlaste se před tímto datem. {support_email, select, null {Pokud máte dotazy, kontaktujte správce této instance.} other {Pokud máte dotazy, kontaktujte {support_email}.}}\n\nTým {product_name}"
+	},
+	"account_deletion_scheduled_requested": {
+		"subject": "Smazání vašeho účtu {product_name} je naplánováno",
+		"body": "Dobrý den, {username},\n\nNa vaši žádost jsme naplánovali smazání vašeho účtu {product_name} na {deletion_date}.\n\nPokud si chcete účet ponechat, přihlaste se před {deletion_date}. {safety_email, select, null {Pokud tato žádost nepochází od vás, kontaktujte správce této instance.} other {Pokud tato žádost nepochází od vás, kontaktujte {safety_email}.}}\n\nTým {product_name}"
+	},
+	"donation_confirmation": {
+		"subject": "Děkujeme za váš dar pro {product_name}",
+		"body": "Dobrý den,\n\nDěkujeme za váš dar pro {product_name}! Váš {interval, select,\n  month {opakovaný dar}\n  year {opakovaný dar}\n  other {jednorázový dar}\n} byl úspěšně {interval, select,\n  month {nastaven}\n  year {nastaven}\n  other {zpracován}\n}.\n\nPodrobnosti o daru:\nČástka: {amount} {interval, select,\n  month {měsíčně}\n  year {ročně}\n  other {}\n}\n\nStripe vám brzy pošle samostatné potvrzení platby s fakturou v PDF. Obsahuje všechny platební údaje a lze ho použít pro daňové účely.\n\nPomocí tohoto odkazu si můžete kdykoli prohlédnout historii svých darů, stáhnout faktury {interval, select,\n  month {a spravovat nebo zrušit předplatné}\n  year {a spravovat nebo zrušit předplatné}\n  other {a spravovat budoucí dary}\n}:\n\n{manageUrl}\n\nVaše podpora pomáhá udržovat {product_name} v chodu. Děkujeme!\n\n– Tým {product_name}"
+	},
+	"donation_magic_link": {
+		"subject": "Spravujte své dary pro {product_name}",
+		"body": "Dobrý den,\n\nKliknutím na odkaz níže otevřete portál pro dárce:\n\n{manageUrl}\n\nNa portálu můžete spravovat předplatná, stahovat faktury a prohlížet si historii svých darů.\n\nPlatnost tohoto odkazu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\nPokud jste si tento odkaz nevyžádali, můžete tento e-mail bez obav ignorovat.\n\n– Tým {product_name}"
+	},
+	"dsa_report_resolved": {
+		"subject": "Rozhodli jsme o vašem nahlášení na {product_name}",
+		"body": "Dobrý den,\n\nPosoudili jsme vaše nahlášení (ID: {reportId}).\n\n{outcome, select, removed {Nahlášený obsah jsme odstranili, protože porušoval naše pravidla.} restricted {Zjistili jsme, že nahlášený účet porušil naše pravidla, a omezili jsme ho. Nesdělujeme, jaké opatření jsme vůči jinému účtu přijali, protože jde o osobní údaje jeho majitele.} action_taken {Zjistili jsme, že nahlášený obsah nebo účet porušil naše pravidla, a přijali jsme opatření. Nesdělujeme, jaké opatření jsme vůči jinému účtu přijali, protože jde o osobní údaje jeho majitele.} no_violation {Zjistili jsme, že nahlášený obsah nebo účet naše pravidla neporušuje, a proto jsme vše ponechali beze změny.} other {Vaše nahlášení jsme uzavřeli.}}{hasComment, select, yes {\n\nPoznámka od našeho týmu: {publicComment}} other {}}{appeals_email, select, null {} other {\n\nPokud nesouhlasíte, napište do 60 dnů na {appeals_email} a uveďte ID nahlášení. Pokud se nacházíte v EU, můžete věc také předložit certifikovanému subjektu pro mimosoudní řešení sporů nebo podat stížnost koordinátorovi digitálních služeb ve své zemi.}}\n\nTým {product_name}"
+	},
+	"dsa_report_verification": {
+		"subject": "Ověřte svůj e-mail pro nahlášení podle DSA",
+		"body": "Dobrý den,\n\nPomocí ověřovacího kódu níže odešlete své nahlášení podle nařízení o digitálních službách na {product_name}:\n\n{code}\n\nPlatnost tohoto kódu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\nPokud jste si tento kód nevyžádali, můžete tento e-mail ignorovat.\n\n– Bezpečnostní tým {product_name}"
+	},
+	"email_change_new": {
+		"subject": "Ověřte svou novou e-mailovou adresu pro {product_name}",
+		"body": "Dobrý den, {username},\n\nZadáním tohoto kódu v aplikaci ověříte svou novou e-mailovou adresu pro {product_name}:\n\n{code}\n\nPlatnost tohoto kódu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\nPokud jste si tento kód nevyžádali, můžete tento e-mail ignorovat.\n\n– Tým {product_name}"
+	},
+	"email_change_original": {
+		"subject": "Potvrďte změnu e-mailové adresy pro {product_name}",
+		"body": "Dobrý den, {username},\n\nObdrželi jsme žádost o změnu e-mailové adresy vašeho účtu {product_name}.\n\nZměnu potvrďte zadáním tohoto kódu v aplikaci:\n\n{code}\n\nPlatnost tohoto kódu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\nPokud jste o tuto změnu nežádali, ihned svůj účet zabezpečte.\n\n– Tým {product_name}"
+	},
+	"email_change_revert": {
+		"subject": "Vaše e-mailová adresa pro {product_name} byla změněna",
+		"body": "Dobrý den, {username},\n\nE-mailová adresa vašeho účtu {product_name} byla změněna na {newEmail}.\n\nPokud jste tuto změnu provedli vy, nemusíte nic dělat. Pokud ne, můžete ji vrátit zpět a zabezpečit svůj účet pomocí tohoto odkazu:\n\n{revertUrl}\n\nTím se obnoví vaše předchozí e-mailová adresa, budete odhlášeni ze všech zařízení, vypne se vícefaktorové ověřování a budete muset nastavit nové heslo.\n\n– Bezpečnostní tým {product_name}"
+	},
+	"email_verification": {
+		"subject": "Ověřte svou e-mailovou adresu pro {product_name}",
+		"body": "Dobrý den, {username},\n\nKliknutím na odkaz níže ověřte e-mailovou adresu svého účtu {product_name}:\n\n{verifyUrl}\n\nPokud jste si účet {product_name} nevytvořili, můžete tento e-mail bez obav ignorovat.\n\nTento odkaz je platný 24 hodin.\n\n– Tým {product_name}"
+	},
+	"enforcement_ended": {
+		"subject": "{outcome, select, reversed {Zrušili jsme rozhodnutí týkající se vašeho účtu {product_name}} other {Omezení vašeho účtu {product_name} skončilo}}",
+		"body": "Dobrý den, {username},\n\n{outcome, select, reversed {{decision_id, select, null {Znovu jsme posoudili rozhodnutí týkající se vašeho účtu a zrušili ho.} other {Znovu jsme posoudili rozhodnutí {decision_id} a zrušili ho.}} Omlouváme se za potíže.} other {{decision_id, select, null {Ukončili jsme omezení vašeho účtu.} other {Ukončili jsme omezení uložené rozhodnutím {decision_id}.}}}}{restores_access, select, yes { Můžete se znovu přihlásit a používat {product_name}.} other {}}{statement, select, null {} other {\n\nPoznámka od našeho týmu: {statement}}}{content_removed, select, yes {\n\nOdstraněný obsah nelze obnovit.} other {}}\n\nTým {product_name}"
+	},
+	"enforcement_notice": {
+		"subject": "{neutral, select, yes {Informace o vašem účtu {product_name}} other {{kind_label, select, warning {Varování týkající se vašeho účtu {product_name}} suspension {Váš účet {product_name} je pozastaven} ban {Váš účet {product_name} je zablokován} closure {Váš účet {product_name} je zrušen} feature_limit {Některé funkce vašeho účtu {product_name} jsou omezeny} content_removal {Odstranili jsme vaše zprávy na {product_name}} profile_reset {Resetovali jsme část vašeho profilu {product_name}} community_removal {Odstranili jsme vaši komunitu na {product_name}} bot {Informace o vašem botovi na {product_name}} other {Informace o vašem účtu {product_name}}}}}",
+		"body": "Dobrý den, {username},\n\n{summary}\n\n{effects}\n\nProč\nPravidlo: {rule_title}{rule_url, select, null {} other { ({rule_url})}}\n{facts}{statement, select, null {} other {\n\nPoznámka od našeho týmu: {statement}}}\n\nJak jsme rozhodli\n{how_we_decided}{appeals_email, select, null {} other {\n\nJak se odvolat\nPokud si myslíte, že jsme udělali chybu, napište na {appeals_email} do {appeal_deadline}. Pokud můžete, pište z e-mailové adresy svého účtu a uveďte ID rozhodnutí. Odvolání je zdarma a každé posoudí člověk.{redress, select, null {} other {\n\n{redress}}}}}\n\nID rozhodnutí: {decision_id}\n\nTým {product_name}"
+	},
+	"gift_chargeback_notification": {
+		"subject": "Výhody z uplatněného dárku byly odstraněny",
+		"body": "Dobrý den, {username},\n\nDárkový kód, který jste uplatnili, původně zaplatil někdo jiný. Tato platba byla následně vrácena na základě reklamace (chargeback).\n\nProto jsme odebrali výhody, které váš účet získal při uplatnění dárku.\n\n{support_email, select, null {Pokud se domníváte, že jde o chybu, kontaktujte správce této instance a uveďte všechny dostupné podrobnosti o dárkovém kódu a o tom, kdy jste ho uplatnili.} other {Pokud se domníváte, že jde o chybu, kontaktujte náš tým podpory a uveďte všechny dostupné podrobnosti o dárkovém kódu a o tom, kdy jste ho uplatnili.}}\n\n– Tým {product_name}"
+	},
+	"harvest_completed": {
+		"subject": "Export vašich dat z {product_name} je připraven ke stažení",
+		"body": "Dobrý den, {username},\n\nExport vašich dat je připraven.\n\nOdkaz ke stažení:\n{downloadUrl}\n\nPočet zahrnutých zpráv: {totalMessages, number}\nVelikost souboru: {fileSizeMB, number} MB\n\nPlatnost tohoto odkazu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\n{support_email, select, null {Pokud jste si tento export nevyžádali, okamžitě si změňte heslo a kontaktujte správce této instance.} other {Pokud jste si tento export nevyžádali, okamžitě si změňte heslo a kontaktujte náš tým podpory.}}\n\n– Tým {product_name}"
+	},
+	"inactivity_warning": {
+		"subject": "Váš účet {product_name} bude smazán kvůli neaktivitě",
+		"body": "Dobrý den, {username},\n\nOd {lastActiveDate, date, full} jsme na vašem účtu {product_name} nezaznamenali žádnou aktivitu.\n\nPokud se nepřihlásíte do {deletionDate, date, full} v {deletionDate, time, short}, váš účet bude kvůli neaktivitě trvale smazán.\n\nPřihlaste se zde:\n{loginUrl}\n\n{support_email, select, null {Pokud jste {product_name} v poslední době používali, ihned kontaktujte správce této instance.} other {Pokud jste {product_name} v poslední době používali, ihned kontaktujte náš tým podpory.}}\n\n– Tým {product_name}"
+	},
+	"ip_authorization": {
+		"subject": "Povolit přihlášení z nové IP adresy",
+		"body": "Dobrý den, {username},\n\nZaznamenali jsme pokus o přihlášení k vašemu účtu {product_name} z nové IP adresy:\n\nIP adresa: {ipAddress}\nPoloha: {location}\n\nPokud jste to byli vy, povolte tuto IP adresu kliknutím na odkaz níže:\n\n{authUrl}\n\nPokud jste se nepokoušeli přihlásit, ihned si změňte heslo.\n\nTento odkaz je platný 30 minut.\n\n– Tým {product_name}"
+	},
+	"mfa_backup_codes_view": {
+		"subject": "Potvrďte přístup k záložním kódům pro {product_name}",
+		"body": "Dobrý den, {username},\n\nObdrželi jsme žádost o zobrazení záložních kódů vašeho účtu {product_name}.\n\nŽádost potvrďte zadáním tohoto kódu v aplikaci:\n\n{code}\n\nPlatnost tohoto kódu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\nPokud jste o to nežádali, někdo může mít přístup k vašemu účtu. Okamžitě si změňte heslo.\n\n– Tým {product_name}"
+	},
+	"password_change_verification": {
+		"subject": "Potvrďte změnu hesla k účtu {product_name}",
+		"body": "Dobrý den, {username},\n\nObdrželi jsme žádost o změnu hesla k vašemu účtu {product_name}.\n\nZměnu potvrďte zadáním tohoto kódu v aplikaci:\n\n{code}\n\nPlatnost tohoto kódu vyprší dne {expiresAt, date, full} v {expiresAt, time, short}.\n\nPokud jste o to nežádali, někdo může mít přístup k vašemu účtu. Okamžitě si změňte heslo a zapněte dvoufaktorové ověřování.\n\n– Tým {product_name}"
+	},
+	"password_reset": {
+		"subject": "Obnovte své heslo k účtu {product_name}",
+		"body": "Dobrý den, {username},\n\nPožádali jste o obnovení hesla k účtu {product_name}. Pomocí odkazu níže si nastavte nové heslo:\n\n{resetUrl}\n\nPokud jste o to nežádali, můžete tento e-mail bez obav ignorovat.\n\nTento odkaz je platný 1 hodinu.\n\n– Tým {product_name}"
+	},
+	"report_received": {
+		"subject": "Obdrželi jsme vaše nahlášení na {product_name}",
+		"body": "Dobrý den,\n\nObdrželi jsme vaše nahlášení podle nařízení o digitálních službách, které se týká {targetKind, select, message {zprávy} user {účtu} guild {komunity} other {obsahu}} na {product_name}.\n\nID nahlášení: {reportId}\n\nNáš bezpečnostní tým vaše nahlášení přezkoumá a jakmile rozhodneme, napíšeme vám na tuto adresu. Tento e-mail si uschovejte pro své záznamy.\n\n– Bezpečnostní tým {product_name}"
+	},
+	"report_resolved": {
+		"subject": "Vaše nahlášení na {product_name} bylo přezkoumáno",
+		"body": "Dobrý den, {username},\n\nPosoudili jsme vaše nahlášení (ID: {reportId}).\n\n{outcome, select, removed {Nahlášený obsah jsme odstranili, protože porušoval naše pravidla.} restricted {Zjistili jsme, že nahlášený účet porušil naše pravidla, a omezili jsme ho. Nesdělujeme, jaké opatření jsme vůči jinému účtu přijali, protože jde o osobní údaje jeho majitele.} action_taken {Zjistili jsme, že nahlášený obsah nebo účet porušil naše pravidla, a přijali jsme opatření. Nesdělujeme, jaké opatření jsme vůči jinému účtu přijali, protože jde o osobní údaje jeho majitele.} no_violation {Zjistili jsme, že nahlášený obsah nebo účet naše pravidla neporušuje, a proto jsme vše ponechali beze změny.} other {Vaše nahlášení jsme uzavřeli.}}{hasComment, select, yes {\n\nPoznámka od našeho týmu: {publicComment}} other {}}{appeals_email, select, null {} other {\n\nPokud nesouhlasíte, napište do 60 dnů na {appeals_email} a uveďte ID nahlášení. Pokud se nacházíte v EU, můžete věc také předložit certifikovanému subjektu pro mimosoudní řešení sporů nebo podat stížnost koordinátorovi digitálních služeb ve své zemi.}}\n\nTým {product_name}"
+	},
+	"self_deletion_scheduled": {
+		"subject": "Smazání vašeho účtu {product_name} je naplánováno",
+		"body": "Dobrý den, {username},\n\nPožádali jste o smazání svého účtu {product_name}. Trvalé smazání je naplánováno na:\n\n{deletionDate, date, full} v {deletionDate, time, short}\n\nPokud jste o smazání nežádali, přihlaste se ke svému účtu a smazání zrušte. Doporučujeme také změnit heslo, abyste svůj účet zabezpečili.\n\n– Tým {product_name}"
+	}
+}

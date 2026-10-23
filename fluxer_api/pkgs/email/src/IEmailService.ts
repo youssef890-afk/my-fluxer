@@ -1,0 +1,129 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+import type {
+	EmailTemplateVariables,
+	ReporterOutcome,
+	ReportReceivedTargetKind,
+} from '@pkgs/email/src/email_i18n/EmailI18nTypes';
+
+export interface IEmailService {
+	sendPasswordResetEmail(email: string, username: string, resetToken: string, locale?: string | null): Promise<boolean>;
+	sendEmailVerification(
+		email: string,
+		username: string,
+		verificationToken: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendIpAuthorizationEmail(
+		email: string,
+		username: string,
+		authorizationToken: string,
+		ipAddress: string,
+		location: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendSelfDeletionScheduledEmail(
+		email: string,
+		username: string,
+		deletionDate: Date,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendAccountDeletionRequestedEmail(
+		email: string,
+		username: string,
+		deletionDate: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendAccountDeletionInactivityEmail(
+		email: string,
+		username: string,
+		deletionDate: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendAccountDeletionCancelledEmail(email: string, username: string, locale?: string | null): Promise<boolean>;
+	sendEnforcementNoticeEmail(
+		email: string,
+		variables: EmailTemplateVariables['enforcement_notice'],
+		locale?: string | null,
+	): Promise<boolean>;
+	sendEnforcementEndedEmail(
+		email: string,
+		variables: EmailTemplateVariables['enforcement_ended'],
+		locale?: string | null,
+	): Promise<boolean>;
+	sendInactivityWarningEmail(
+		email: string,
+		username: string,
+		deletionDate: Date,
+		lastActiveDate: Date,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendHarvestCompletedEmail(
+		email: string,
+		username: string,
+		downloadUrl: string,
+		totalMessages: number,
+		fileSize: number,
+		expiresAt: Date,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendGiftChargebackNotification(email: string, username: string, locale?: string | null): Promise<boolean>;
+	sendReportResolvedEmail(
+		email: string,
+		username: string,
+		reportId: string,
+		publicComment: string,
+		outcome: ReporterOutcome,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendDsaReportResolvedEmail(
+		email: string,
+		reportId: string,
+		publicComment: string,
+		outcome: ReporterOutcome,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendReportReceivedEmail(
+		email: string,
+		reportId: string,
+		targetKind: ReportReceivedTargetKind,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendDsaReportVerificationCode(email: string, code: string, expiresAt: Date, locale?: string | null): Promise<boolean>;
+	sendEmailChangeOriginal(email: string, username: string, code: string, locale?: string | null): Promise<boolean>;
+	sendEmailChangeNew(email: string, username: string, code: string, locale?: string | null): Promise<boolean>;
+	sendEmailChangeRevert(
+		email: string,
+		username: string,
+		newEmail: string,
+		token: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendPasswordChangeVerification(
+		email: string,
+		username: string,
+		code: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendMfaBackupCodesVerification(
+		email: string,
+		username: string,
+		code: string,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendDonationMagicLink(
+		email: string,
+		token: string,
+		manageUrl: string,
+		expiresAt: Date,
+		locale?: string | null,
+	): Promise<boolean>;
+	sendDonationConfirmation(
+		email: string,
+		amountCents: number,
+		currency: string,
+		interval: string,
+		manageUrl: string,
+		locale?: string | null,
+	): Promise<boolean>;
+}
